@@ -12,7 +12,6 @@ if __name__ == '__main__':
     vs = VideoStream().start()
     net = KeypointNet(K=5)
     net.load_weights('facial_pvanet.h5')
-    net.model.predict(np.random.uniform(size=(1, 256, 256, 3)))
     tock = datetime.now()
     init_time = tock - tick
     print(f"[info] complete, initialize time: {init_time.total_seconds():.2f} sec.\n")
